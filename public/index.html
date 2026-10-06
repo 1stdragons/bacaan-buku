@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Masuk — Bacaan Buku</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#1a5fb4">
+</head>
+<body class="auth-body">
+  <div class="auth-card">
+    <div class="auth-logo">📚</div>
+    <h1>Bacaan Buku</h1>
+    <p class="muted">Masuk untuk melanjutkan</p>
+
+    <div class="tabs">
+      <button class="tab active" data-role="mahasiswa">Mahasiswa</button>
+      <button class="tab" data-role="dosen">Dosen</button>
+    </div>
+
+    <form id="loginForm">
+      <div class="field">
+        <label id="lblUser" for="username">Nama</label>
+        <input type="text" id="username" autocomplete="username" required placeholder="Nama lengkap">
+      </div>
+      <div class="field">
+        <label id="lblPass" for="password">NIM</label>
+        <input type="password" id="password" autocomplete="current-password" required placeholder="NIM">
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Masuk</button>
+      <p id="errMsg" class="error"></p>
+    </form>
+  </div>
+  <script src="/js/login.js"></script>
+</body>
+</html>

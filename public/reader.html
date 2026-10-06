@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Membaca — Bacaan Buku</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#1a5fb4">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+</head>
+<body class="reader-body">
+  <header class="topbar">
+    <a class="btn btn-ghost" href="/app">← Kembali</a>
+    <div class="brand" id="docTitle">Memuat...</div>
+    <div class="topbar-right">
+      <span id="progressLabel" class="p-num">0%</span>
+      <span id="saveState" class="muted save-state"></span>
+    </div>
+  </header>
+
+  <div class="progress-strip"><div id="stripFill"></div></div>
+
+  <!-- Mode teks -->
+  <main id="textReader" class="reader-content hidden">
+    <article id="articleBody" class="article"></article>
+  </main>
+
+  <!-- Mode PDF -->
+  <main id="pdfReader" class="reader-content hidden">
+    <div class="pdf-toolbar">
+      <button id="prevPage" class="btn btn-ghost">‹ Sebelumnya</button>
+      <span id="pageInfo">Halaman - / -</span>
+      <button id="nextPage" class="btn btn-ghost">Berikutnya ›</button>
+    </div>
+    <div id="pdfCanvasWrap"><canvas id="pdfCanvas"></canvas></div>
+    <div class="pdf-toolbar">
+      <button id="prevPage2" class="btn btn-ghost">‹ Sebelumnya</button>
+      <span id="pageInfo2">Halaman - / -</span>
+      <button id="nextPage2" class="btn btn-ghost">Berikutnya ›</button>
+    </div>
+  </main>
+
+  <div id="toast" class="toast hidden"></div>
+  <script src="/js/reader.js"></script>
+</body>
+</html>
